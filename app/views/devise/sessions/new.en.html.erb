@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRM 登录</title>
+<title>Social CRM 登录</title>
 <style type="text/css">
 <!--
 body{margin:0; padding:0;
@@ -109,9 +109,9 @@ input{border:none;
   <div class="D3_l">
       <div class="D3_lt"><%= image_tag "D_dt.jpg",:size=>"635x321"%><!-- <img src="images/D_dt.jpg" width="635" height="321" /> --></div>
         <div class="D3_lb">
-          <span><h2>客户信誉</h2><p>13年来累计超过了100,000家企业使用过。</p></span>
-            <bdo><h2>客户信誉</h2><p>分布式邮件服务器集群，海内外收发邮件畅通无阻</p></bdo>
-            <b><h2>客户信誉</h2><p>分布式邮件服务器集群，海内外收发邮件畅通无阻过。</p></b>
+          <span><h2>Customer credit</h2><p>13 years has accumulated more than 100000 companies used.</p></span>
+            <bdo><h2>Customer credit</h2><p>Distributed mail server cluster, overseas mail smoothly</p></bdo>
+            <b><h2>Customer credit</h2><p>Distributed mail server cluster, overseas mail too smoothly.</p></b>
       </div>
     </div>
     <div class="D3_r">
@@ -120,17 +120,17 @@ input{border:none;
             <div class='ipt'><%= f.email_field :email, autofocus: true %></div>
             
             <div class='ipt'><%= f.password_field :password, autocomplete: "off" %></div> 
-            <div><p><%= f.submit "登录" %><p ></div>
+            <div><p><%= f.submit "login" %><p ></div>
                 <p><%= notice %><%= alert %></p>
-                <p><%= link_to "English", :locale=>'en' %>&nbsp&nbsp&nbsp<%= link_to "简体中文", :locale=>'zh_CN' %></p>
+                <p><%= link_to "English", :locale=>'en' %>&nbsp<%= link_to "简体中文", :locale=>'zh_CN' %>&nbsp<%= link_to "繁體中文", :locale=>'zh' %>&nbsp<%= link_to "日本語", :locale=>'ro' %></p>
            
             <p></p>
         </form>
   </div>
 </div>
 <div class="D4">
-<div class="D41"><a href="#">系统简介</a> | <a href="#">使用帮助</a> | <a href="#">在线客服</a> | <a href="#">问题反馈</a>
-    <span><br />技术支持：脉博移动方案有限公司
+<div class="D41"><a href="#">System profile</a> | <a href="#">Use help</a> | <a href="#">Online Service</a> | <a href="#">Problem feedback</a>
+    <span><br />Technical support: MoboPlus Solutions
           <br />Copyright © 2016 MoboPlus Solutions All Rights Reserved</span></div>
 </div>
 </body>

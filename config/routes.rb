@@ -1,11 +1,29 @@
 Rails.application.routes.draw do
-  resources :tests
-  devise_for :users
-  root 'home#index'
-  resources :users
-  resources :logs
-  resources :galaxy_macaus
-  resources :dazhongs
+  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+   resources :tests
+   resources :logs
+   resources :products
+   resources :posts do
+    collection { post :import }
+   end
+   resources :dazhongs
+   resources :galaxy_macaus
+   resources :huiyuans
+   devise_for :users
+   resources :galaxy_macaus
+   resources :associators
+   root :to => "home#index"
+end
+
+get '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
+get '', to: redirect("/#{I18n.default_locale}")
+  # resources :tests
+  # devise_for :users
+  # root 'home#index'
+  # resources :users
+  # resources :logs
+  # resources :galaxy_macaus
+  # resources :dazhongs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

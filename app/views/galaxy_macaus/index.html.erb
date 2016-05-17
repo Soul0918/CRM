@@ -1,6 +1,13 @@
 <%- model_class = GalaxyMacau -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=t 'galaxy_macaus' %></h1>
+  <%= search_form_for @search do |f| %>
+  <%= f.label :contact %>
+  <%= f.search_field :contact_cont %>
+  <%= f.label :openid %>
+  <%= f.search_field :openid_cont %>
+  <%= f.submit "search" %>
+  <% end %>
 </div>
 <table class="table table-striped">
   <thead>

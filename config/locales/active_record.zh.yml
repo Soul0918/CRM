@@ -1,0 +1,78 @@
+zh:
+ activerecord:
+    models:
+      post:
+        one: 測試
+        other: 測試
+      user:
+        one: 用戶
+        other: 用戶
+      associator:
+        one: 會員
+        other: 會員
+      role:
+        one: 權限等級
+        other: 權限等級
+      log: 
+        one: 日誌
+        other: 日誌
+      dazhong:
+        one: 大眾汽車
+        other: 大眾汽車
+      galaxy_macau: 
+        one: 澳門銀河
+        other: 澳門銀河
+    attributes:
+      user:
+        id: ID
+        email: 郵箱
+        password: 密碼
+        password_confirmation: 確認密碼
+        reset_password_sent_at: 重置密碼時間
+        remember_created_at: 創建時間
+        sign_in_count: 登錄次數
+        current_sign_in_at: 登入時間
+        last_signin_at: 最後一次登錄
+        current_sing_in_ip: 本次登錄IP
+        last_sign_in_ip: 最後一次登錄IP
+        username: 用戶名稱
+        roles: 等級
+      associator:
+        id: ID
+        name: 姓名   
+        number: 電話
+        addr: 地址
+        describe: 描述
+        created_at: 創建時間
+      role:
+        id: ID
+        name: 名稱
+        user: 用戶
+        created_at: 創建時間
+        updated_at: 更新時間
+      log:
+        uuid: uuid
+        major: major
+        minor: minor
+        distance: 距離
+        ip: IP 
+        date: 日期
+        time: 時間
+      dazhong:
+        chudian: 觸點
+        openid: OpendId
+        url: 鏈接地址
+        time: 連入時間
+        created_at: 創建時間
+      post:
+        title: 標題
+        name: 姓名
+        number: 編號
+        created_at: 創建時間
+        updated_at: 更新時間
+      galaxy_macau: 
+        contact: 觸點
+        openid: OpendId
+        url: 鏈接地址
+        time: 連入時間
+        created_at: 創建時間

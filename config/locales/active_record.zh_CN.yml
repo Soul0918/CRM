@@ -1,0 +1,80 @@
+zh_CN:
+ activerecord:
+    models:
+      post:
+        one: 测试
+        other: 测试
+      user:
+        one: 用户
+        other: 用户
+      associator:
+        one: 会员
+        other: 会员
+      role:
+        one: 权限等级
+        other: 权限等级
+      log: 
+        one: 日志
+        other: 日志
+      dazhong:
+        one: 大众汽车
+        other: 大众汽车
+      galaxy_macau: 
+        one: 澳门银河
+        other: 澳门银河
+    attributes:
+      user:
+        id: ID
+        email: 邮箱
+        password: 密码
+        password_confirmation: 确认密码
+        reset_password_sent_at: 重置密码时间
+        remember_created_at: 创建时间
+        sign_in_count: 登录次数
+        current_sign_in_at: 登录时间
+        last_signin_at: 最后一次登录
+        current_sing_in_ip: 本次登录IP
+        last_sign_in_ip: 最后一次登录IP
+        username: 用户名称
+        roles: 等级
+      associator:
+        id: ID
+        name: 姓名    
+        number: 电话
+        addr: 地址
+        describe: 描述
+        created_at: 创建时间
+      role:
+        id: ID
+        name: 名称
+        user: 用户
+        created_at: 创建时间
+        updated_at: 更新时间
+      log:
+        uuid: uuid
+        major: major
+        minor: minor
+        distance: 距离
+        ip: IP 
+        date: 日期
+        time: 时间
+      dazhong:
+        chudian: 触点
+        openid: OpendId
+        url: 链接地址
+        time: 连入时间
+        created_at: 创建时间
+      post:
+        title: 标题
+        name: 姓名
+        number: 编号
+        created_at: 创建时间
+        updated_at: 更新时间
+      galaxy_macau: 
+        contact: 触点
+        openid: OpendId
+        url: 链接地址
+        time: 连入时间
+        created_at: 创建时间
+ 
+

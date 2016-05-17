@@ -1,0 +1,269 @@
+ro:
+  activerecord:
+    attributes:
+      user:
+        current_password: "現在のパスワード"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "確認用パスワード"
+        remember_me: "ログインを記憶"
+    models:
+      user: "ユーザ"
+  devise:
+    confirmations:
+      confirmed: "アカウントを登録しました。"
+      new:
+        resend_confirmation_instructions: "アカウント確認メール再送"
+      send_instructions: "アカウントの有効化について数分以内にメールでご連絡します。"
+      send_paranoid_instructions: "あなたのメールアドレスが登録済みの場合、本人確認用のメールが数分以内に送信されます。"
+    failure:
+      already_authenticated: "すでにログインしています。"
+      inactive: "アカウントが有効化されていません。メールに記載された手順にしたがって、アカウントを有効化してください。"
+      invalid: "メールアドレスまたはパスワードが違います。"
+      last_attempt: "あなたのアカウントが凍結される前に、複数回の操作がおこなわれています。"
+      locked: "あなたのアカウントは凍結されています。"
+      not_found_in_database: "メールアドレスまたはパスワードが違います。"
+      timeout: "セッションがタイムアウトしました。もう一度ログインしてください。"
+      unauthenticated: "アカウント登録もしくはログインしてください。"
+      unconfirmed: "メールアドレスの本人確認が必要です。"
+    mailer:
+      confirmation_instructions:
+        action: "アカウント確認"
+        greeting: "ようこそ、%{recipient}さん!"
+        instruction: "次のリンクでメールアドレスの確認が完了します:"
+        subject: "アカウントの有効化について"
+      password_change:
+        greeting: "こんにちは、%{recipient}さん!"
+        message: "あなたのパスワードが再設定されたことを通知します。"
+        subject: "パスワードの変更について"
+      reset_password_instructions:
+        action: "パスワード変更"
+        greeting: "こんにちは、%{recipient}さん!"
+        instruction: "誰かがパスワードの再設定を希望しました。次のリンクでパスワードの再設定が出来ます。"
+        instruction_2: "あなたが希望したのではないのなら、このメールは無視してください。"
+        instruction_3: "上のリンクにアクセスして新しいパスワードを設定するまで、パスワードは変更されません。"
+        subject: "パスワードの再設定について"
+      unlock_instructions:
+        action: "アカウントのロック解除"
+        greeting: "こんにちは、%{recipient}さん!"
+        instruction: "アカウントのロックを解除するには下のリンクをクリックしてください。"
+        message: "ログイン失敗が繰り返されたため、アカウントはロックされています。"
+        subject: "アカウントの凍結解除について"
+    omniauth_callbacks:
+      failure: "%{kind} アカウントによる認証に失敗しました。理由：（%{reason}）"
+      success: "%{kind} アカウントによる認証に成功しました。"
+    passwords:
+      edit:
+        change_my_password: "パスワードを変更する"
+        change_your_password: "パスワードを変更"
+        confirm_new_password: "確認用新しいパスワード"
+        new_password: "新しいパスワード"
+      new:
+        forgot_your_password: "パスワードを忘れましたか?"
+        send_me_reset_password_instructions: "パスワードの再設定方法を送信する"
+      no_token: "このページにはアクセスできません。パスワード再設定メールのリンクからアクセスされた場合には、URL をご確認ください。"
+      send_instructions: "パスワードの再設定について数分以内にメールでご連絡いたします。"
+      send_paranoid_instructions: "あなたのメールアドレスが登録済みの場合、パスワード再設定用のメールが数分以内に送信されます。"
+      updated: "パスワードが正しく変更されました。"
+      updated_not_active: "パスワードが正しく変更されました。"
+    registrations:
+      destroyed: "アカウントを削除しました。またのご利用をお待ちしております。"
+      edit:
+        are_you_sure: "本当に良いですか?"
+        cancel_my_account: "アカウント削除"
+        currently_waiting_confirmation_for_email: "%{email} の確認待ち"
+        leave_blank_if_you_don_t_want_to_change_it: "空欄のままなら変更しません"
+        title: "%{resource}編集"
+        unhappy: "気に入りません"
+        update: "更新"
+        we_need_your_current_password_to_confirm_your_changes: "変更を反映するには現在のパスワードを入力してください"
+      new:
+        sign_up: "アカウント登録"
+      signed_up: "アカウント登録が完了しました。"
+      signed_up_but_inactive: "ログインするためには、アカウントを有効化してください。"
+      signed_up_but_locked: "アカウントが凍結されているためログインできません。"
+      signed_up_but_unconfirmed: "本人確認用のメールを送信しました。メール内のリンクからアカウントを有効化させてください。"
+      update_needs_confirmation: "アカウント情報を変更しました。変更されたメールアドレスの本人確認のため、本人確認用メールより確認処理をおこなってください。"
+      updated: "アカウント情報を変更しました。"
+    sessions:
+      already_signed_out: "既にログアウト済みです。"
+      new:
+        sign_in: "ログイン"
+      signed_in: "ログインしました。"
+      signed_out: "ログアウトしました。"
+    shared:
+      links:
+        back: "戻る"
+        didn_t_receive_confirmation_instructions: "アカウント確認のメールを受け取っていませんか?"
+        didn_t_receive_unlock_instructions: "アカウントの凍結解除方法のメールを受け取っていませんか?"
+        forgot_your_password: "パスワードを忘れましたか?"
+        sign_in: "ログイン"
+        sign_in_with_provider: "%{provider}でログイン"
+        sign_up: "アカウント登録"
+    unlocks:
+      new:
+        resend_unlock_instructions: "アカウントの凍結解除方法を再送する"
+      send_instructions: "アカウントの凍結解除方法を数分以内にメールでご連絡します。"
+      send_paranoid_instructions: "アカウントが見つかった場合、アカウントの凍結解除方法を数分以内にメールでご連絡します。"
+      unlocked: "アカウントを凍結解除しました。"
+  errors:
+    messages:
+      already_confirmed: "は既に登録済みです。ログインしてください。"
+      confirmation_period_expired: "の期限が切れました。%{period} までに確認する必要があります。 新しくリクエストしてください。"
+      expired: "の有効期限が切れました。新しくリクエストしてください。"
+      not_found: "は見つかりませんでした。"
+      not_locked: "は凍結されていません。"
+      not_saved:
+        one: "エラーが発生したため %{resource} は保存されませんでした:"
+        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした:"
+  logs: 揺れるデータは
+  posts: テスト
+  galaxy_macaus: マカオ銀河
+  dazhongs: フォルクスワーゲン
+  
+  ja:
+  helpers:
+    page_entries_info:
+      more_pages:
+        display_entries: "<b>%{total}</b>中の%{entry_name}を表示しています <b>%{first} - %{last}</b>"
+      one_page:
+        display_entries:
+          one: "<b>%{count}</b>レコード表示中です %{entry_name}"
+          other: "<b>%{count}</b>レコード表示中です %{entry_name}"
+          zero: "レコードが見つかりませんでした %{entry_name}"
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      next: "次 &rsaquo;"
+      previous: "&lsaquo; 前"
+      truncate: "&hellip;"
+      
+  admin:
+    home:
+      name: "ホーム"
+    pagination:
+      previous: "&laquo; 前"
+      next: "次 &raquo;"
+      truncate: "…"
+    misc:
+      filter_date_format: "mm/dd/yy" # a combination of 'dd', 'mm' and 'yy' with any delimiter. No other interpolation will be done!
+      search: "検索"
+      filter: "フィルタ"
+      refresh: "更新"
+      show_all: "全て表示"
+      add_filter: "フィルタを追加"
+      bulk_menu_title: "選択したアイテム"
+      remove: "削除"
+      add_new: "新規作成"
+      chosen: "Chosen %{name}"
+      chose_all: "全て選択"
+      clear_all: "全てクリア"
+      up: "Up"
+      down: "Down"
+      navigation: "ナビゲーション"
+      log_out: "ログアウト"
+      ago: "前"
+    flash:
+      successful: "%{name}の %{action} に成功しました"
+      error: "%{name} の %{action} に失敗しました"
+      noaction: "アクションが指定されていません"
+      model_not_found: "モデル '%{model}' が見つかりません"
+      object_not_found: "ID '%{id}' の%{model}が見つかりません"
+    table_headers:
+      model_name: "モデル名"
+      last_used: "Last used"
+      records: "レコード"
+      username: "ユーザ"
+      changes: "Changes"
+      created_at: "日時"
+      item: "アイテム"
+      message: "メッセージ"
+    actions:
+      dashboard:
+        title: "サイト管理"
+        menu: "ダッシュボード"
+        breadcrumb: "ダッシュボード"
+      index:
+        title: "%{model_label_plural}の一覧"
+        menu: "一覧"
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: "%{model_label} '%{object_label}' の詳細"
+        menu: "表示"
+        breadcrumb: "%{object_label}"
+      show_in_app:
+        menu: "アプリで表示"
+      new:
+        title: "新規 %{model_label}"
+        menu: "新規作成"
+        breadcrumb: "新規"
+        link: "新規 %{model_label} を作成"
+        done: "作成しました"
+      edit:
+        title: "%{model_label} '%{object_label}' の編集"
+        menu: "編集"
+        breadcrumb: "編集"
+        link: "この %{model_label} を編集"
+        done: "更新しました"
+      delete:
+        title: "%{model_label} '%{object_label}' の削除"
+        menu: "削除"
+        breadcrumb: "削除"
+        link: "'%{object_label}' を削除"
+        done: "削除しました"
+      bulk_delete:
+        title: "%{model_label_plural} の削除"
+        menu: "一括削除"
+        breadcrumb: "一括削除"
+        bulk_link: "選択した%{model_label_plural}の削除"
+      export:
+        title: "%{model_label_plural} のエクスポート"
+        menu: "エクスポート"
+        breadcrumb: "エクスポート"
+        link: "クエリ結果の%{model_label_plural}をエクスポート"
+        bulk_link: "選択した%{model_label_plural}のエクスポート"
+        done: "エクスポートしました"
+      history_index:
+        title: "%{model_label_plural} の履歴"
+        menu: "履歴"
+        breadcrumb: "履歴"
+      history_show:
+        title: "%{model_label} '%{object_label}' の履歴"
+        menu: "履歴"
+        breadcrumb: "履歴"
+    form:
+      cancel: "キャンセル"
+      basic_info: "基本情報"
+      required: "必須"
+      optional: "オプション"
+      one_char: "文字"
+      char_length_up_to: "最大文字数:"
+      char_length_of: "文字数:"
+      save: "保存"
+      save_and_add_another: "保存してもう一つ作成"
+      save_and_edit: "保存して編集画面へ"
+      all_of_the_following_related_items_will_be_deleted: ")を削除してよろしいですか？ 以下の関連するアイテムが削除されるかみなしご化されます:"
+      are_you_sure_you_want_to_delete_the_object: "本当に%{model_name} ("
+      confirmation: "はい。間違いありません！"
+      bulk_delete: "以下のオブジェクトが削除され、関連する依存オブジェクトも削除またはみなしご化されます:"
+      new_model: "%{name} (新規)"
+    export:
+      confirmation: "%{name}としてエクスポート"
+      select: "エクスポートするフィールドの選択"
+      fields_from: "%{name}のフィールド"
+      fields_from_associated: "関連%{name}のフィールド"
+      display: "Display %{name}: %{type}"
+      options_for: "%{name}のオプション"
+      empty_value_for_associated_objects: "<空>"
+      click_to_reverse_selection: 'クリックで選択を反転'
+      csv:
+        header_for_root_methods: "%{name}" # 'model' is available
+        header_for_association_methods: "%{name} [%{association}]"
+        encoding_to: "エンコード:"
+        encoding_to_help: "出力エンコードを選択して下さい。空のままにすると現在の入力エンコードのままになります: (%{name})"
+        skip_header: "ヘッダを無し"
+        skip_header_help: "チェックするとヘッダ(フィールドのタイトル)を出力しません。"
+        default_col_sep: ","
+        col_sep: "カラム区切り文字"
+        col_sep_help: "空白にすると標準の '%{value}' になります。" # value is default_col_sep
