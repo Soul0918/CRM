@@ -1,15 +1,138 @@
-<h2>Log in</h2>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Social CRM 登录</title>
+<style type="text/css">
+<!--
+body{margin:0; padding:0;
+     font-size:12px;
+     background:#e3e3e3;}
+input{border:none;
+      margin:0;
+      padding:0;}
+.D1{background-image: url(<%= asset_path 'D_bg.jpg' %>);
+    background-repeat:repeat-x;
+    height:14px;}
+.D2{height:98px;
+    width:1004px;
+    margin:auto;}
+.D3{width:1004px;
+    margin:auto; height:499px;
+    padding-right:68px;}
+  .D3_l{float:left;
+        height:499px;
+        width:635px;}
+    .D3_lt{width:635px;
+          height:321px;}
+    .D3_lb{background-image: url(<%= asset_path 'D_dt_xbg.jpg' %>);
+          background-repeat:no-repeat;
+          width:635px;
+          height:178px;}
+      .D3_lb span{margin-left:77px;
+                  float:left;
+                  display:inline;
+                  width:105px;
+                  height:178px;
+                  display:block;}
+      .D3_lb h2{font-family:"微软雅黑";
+                font-weight:normal;
+                color:#474747;
+                margin:0;
+                padding:10px 0 0 0;}
+      .D3_lb p{color:#7c7c7c;}
+      .D3_lb bdo{margin-left:77px;
+                float:left;
+                display:inline;
+                width:135px;
+                height:178px;
+                display:block;}
+      .D3_lb b{margin-left:57px;
+              float:left;
+              display:inline;
+              width:125px; height:178px;
+              display:block;
+              font-weight:normal;}
+  .D3_r{background-image: url(<%= asset_path 'D_dl_bg.jpg' %>);
+        background-repeat:no-repeat;
+        width:301px;
+        height:499px;
+        float:left;
+        padding:105px 0 0 97px;}
+    .yhm{background-image: url(<%= asset_path"D_dlk.jpg" %>);
+        background-repeat:no-repeat;
+        width:170px;
+        height:34px;
+        padding:0 6px;
+        line-height:34px;
+        margin-bottom:3px;}
+    .fxk{float:left;}
+    .an{background-image: url(<%= asset_path 'D_dl.jpg' %>);
+        background-repeat:no-repeat;
+        width:129px;
+        height:50px;
+        margin-top:15px;}
+    .D3_r p span{float:left;
+                margin-left:8px;
+                color:#7b7b7b;}
+    .ipt{width: 240px;
+        height: 40px;}
+.D4{background-image: url(<%= asset_path 'D_db_bg.jpg' %>);
+    background-repeat:repeat-x;
+    height:157px;
+    text-align:center;
+    line-height:80px;
+    font-family:"微软雅黑";
+    font-size:13px;}
+  .D41{width:1004px;
+       margin:auto;
+       position:relative;}
+  .D4 a{ color:#666;
+        text-decoration:none;}
+  .D41 span{position:absolute;
+            top:0;
+            left:0;
+            line-height:22px;
+            text-align:right;
+            font-size:12px;
+            width:1004px;
+            color:#777;
+            padding-top:20px;}
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+-->
+</style></head>
+<body style="background:#E3E3E3;">
+<div class="D1"></div>
+<div class="D2"><%= image_tag "D_logo.jpg",:size=>"230x98"%><%= image_tag "D_logo_r.jpg",:size=>"774x98"%><!-- <img src="images/D_logo.jpg" width="230" height="98" /> --><!-- <img src="images/D_logo_r.jpg" width="774" height="98" /> --></div>
+<div class="D3">
+  <div class="D3_l">
+      <div class="D3_lt"><%= image_tag "D_dt.jpg",:size=>"635x321"%><!-- <img src="images/D_dt.jpg" width="635" height="321" /> --></div>
+        <div class="D3_lb">
+          <span><h2>Customer credit</h2><p>13 years has accumulated more than 100000 companies used.</p></span>
+            <bdo><h2>Customer credit</h2><p>Distributed mail server cluster, overseas mail smoothly</p></bdo>
+            <b><h2>Customer credit</h2><p>Distributed mail server cluster, overseas mail too smoothly.</p></b>
+      </div>
+    </div>
+    <div class="D3_r">
+        <form id="form2" runat="server">
+            </br>
+            <div class='ipt'><%= f.email_field :email, autofocus: true %></div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+            <div class='ipt'><%= f.password_field :password, autocomplete: "off" %></div>
+            <div><p><%= f.submit "login" %><p ></div>
+                <p><%= notice %><%= alert %></p>
+                <p><%= link_to "English", :locale=>'en' %>&nbsp<%= link_to "简体中文", :locale=>'zh_CN' %>&nbsp<%= link_to "繁體中文", :locale=>'zh' %>&nbsp<%= link_to "日本語", :locale=>'ro' %></p>
+
+            <p></p>
+        </form>
   </div>
+</div>
+<div class="D4">
+<div class="D41"><a href="#">System profile</a> | <a href="#">Use help</a> | <a href="#">Online Service</a> | <a href="#">Problem feedback</a>
+    <span><br />Technical support: MoboPlus Solutions
+          <br />Copyright © 2016 MoboPlus Solutions All Rights Reserved</span></div>
+</div>
+</body>
+</html>
 <% end %>
-
-<%= render "devise/shared/links" %>

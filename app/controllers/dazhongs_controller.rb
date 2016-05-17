@@ -1,5 +1,5 @@
 class DazhongsController < ApplicationController
 	def index
-		@dazhongs = Dazhong.all 
+		@dazhongs = Dazhong.all
 	end
 end

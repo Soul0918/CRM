@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <%= stylesheet_link_tag    "application", :media => "all" %>  
-    <%= javascript_include_tag "application" %>  
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
 
     <meta charset="utf-8">
@@ -39,7 +39,7 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <h3>CRM</h3>
-                        
+
                            <p class="notice"><%= notice %></p>
                            <p class="alert"><%= alert %></p>
                        <!--  <div class="dropdown profile-element"> <span>
@@ -63,50 +63,50 @@
                     <li>
                         <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">BasicInformation</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><%=link_to "MemberList" %></a></li>  
+                            <li><%=link_to "MemberList" %></a></li>
                             <li><%=link_to "MemberInformationManagement" %></a></li>   <!-- 未加链接地址 -->
                             <li><%=link_to "MemberAtributes" %></a></li>   <!-- 未加链接地址 -->
                             <li><%=link_to "MemberPortraitManagement" %></a></li>   <!-- 未加链接地址 -->
-                            <li><%=link_to "MerchantManagement" %></a></li>   <!-- 未加链接地址 --> 
-                            <li><%=link_to "ReportForm" %></a></li>   <!-- 未加链接地址 --> 
+                            <li><%=link_to "MerchantManagement" %></a></li>   <!-- 未加链接地址 -->
+                            <li><%=link_to "ReportForm" %></a></li>   <!-- 未加链接地址 -->
                         </ul>
                     </li>
-                   
+
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">ActivityManagement</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><%=link_to "HistoricalEventManagement" %></a></li>   <!-- 未加链接地址 --> 
-                            <li><%=link_to "NewEventManagement" %></a></li>   <!-- 未加链接地址 --> 
+                            <li><%=link_to "HistoricalEventManagement" %></a></li>   <!-- 未加链接地址 -->
+                            <li><%=link_to "NewEventManagement" %></a></li>   <!-- 未加链接地址 -->
                         </ul>
                     </li>
-                   
-                    
+
+
                     <li>
                         <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">InterfaceManage</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><%=link_to "WeChatShakeDate",logs_path %></a></li>
                             <li><%=link_to "VolkswagenData",dazhongs_path %></a></li>
                             <li><%=link_to "GalaxyMacau",galaxy_macaus_path %></a></li>
-                            <li><%=link_to "InterfaceList" %></a></li>   <!-- 未加链接地址 --> 
-                            <li><%=link_to "InterfaceDataAcquisition" %></a></li>   <!-- 未加链接地址 --> 
-                            <li><%=link_to "NewInterfaceManagement" %></a></li>   <!-- 未加链接地址 --> 
+                            <li><%=link_to "InterfaceList" %></a></li>   <!-- 未加链接地址 -->
+                            <li><%=link_to "InterfaceDataAcquisition" %></a></li>   <!-- 未加链接地址 -->
+                            <li><%=link_to "NewInterfaceManagement" %></a></li>   <!-- 未加链接地址 -->
                         </ul>
                     </li>
-                    
+
                     <li>
                         <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">IntegralManagement</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><%=link_to "IntegralMall" %></a></li>   <!-- 未加链接地址 --> 
-                            <li><%=link_to "IntegralImport" %></a></li>   <!-- 未加链接地址 --> 
+                            <li><%=link_to "IntegralMall" %></a></li>   <!-- 未加链接地址 -->
+                            <li><%=link_to "IntegralImport" %></a></li>   <!-- 未加链接地址 -->
                             <li><%=link_to "IntegralDerivation" %></a></li>   <!-- 未加链接地址 -->
                         </ul>
                     </li>
-                    
+
                     <li>
                         <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">SystemManagement</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><%=link_to "SystemLog" %></a></li>   <!-- 未加链接地址 -->
-                            <li><%=link_to "AuthorityManagement" %></a></li>   <!-- 未加链接地址 -->  
+                            <li><%=link_to "AuthorityManagement" %></a></li>   <!-- 未加链接地址 -->
                             <li><%=link_to "OtherManagement" %></a></li>   <!-- 未加链接地址 -->
                         </ul>
                     </li>
@@ -129,22 +129,23 @@
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <%= link_to "English", :locale=>'en' %>
-                    
+
                 </li>
                 <li class="dropdown">
                     <%= link_to "简体中文", :locale=>'zh_CN' %>
-                    
+
                 </li>
                 <li class="dropdown">
                     <%= link_to "繁體中文", :locale=>'zh' %>
-                    
+
                 </li>
                 <li class="dropdown">
                     <%= link_to "日本語", :locale=>'ro' %>
-                    
+
                 </li>
-
-
+                <li>
+                     <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                </li>
                 <li>
                     <a class="right-sidebar-toggle">
                         <i class="fa fa-tasks"></i>
@@ -157,7 +158,7 @@
         </div>
                 <div class="footer">
                     <div class="pull-right">
-                         <strong>CRM</strong> 
+                         <strong>CRM</strong>
                     </div>
                     <div>
                         Copyright<strong> Moboplus</strong> &copy; 2016
