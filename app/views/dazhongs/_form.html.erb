@@ -1,0 +1,14 @@
+<%= simple_form_for @dazhong, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :chudian %>
+  <%= error_span(@dazhong[:chudian]) %>
+  <%= f.input :openid %>
+  <%= error_span(@dazhong[:openid]) %>
+  <%= f.input :url %>
+  <%= error_span(@dazhong[:url]) %>
+  <%= f.input :time %>
+  <%= error_span(@dazhong[:time]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                dazhongs_path, :class => 'btn btn-default' %>
+<% end %>

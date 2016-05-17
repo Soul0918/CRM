@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uuid: MyString
+  major: MyString
+  minor: MyString
+  distance: MyString
+  ip: MyString
+  date: 2016-05-16
+  time: 2016-05-16 15:30:44
+
+two:
+  uuid: MyString
+  major: MyString
+  minor: MyString
+  distance: MyString
+  ip: MyString
+  date: 2016-05-16
+  time: 2016-05-16 15:30:44

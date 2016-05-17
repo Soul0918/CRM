@@ -1,0 +1,14 @@
+<%= simple_form_for @galaxy_macau, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :contact %>
+  <%= error_span(@galaxy_macau[:contact]) %>
+  <%= f.input :openid %>
+  <%= error_span(@galaxy_macau[:openid]) %>
+  <%= f.input :url %>
+  <%= error_span(@galaxy_macau[:url]) %>
+  <%= f.input :time %>
+  <%= error_span(@galaxy_macau[:time]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                galaxy_macaus_path, :class => 'btn btn-default' %>
+<% end %>

@@ -1,0 +1,26 @@
+<%- model_class = Dazhong -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:chudian) %></th>
+      <th><%= model_class.human_attribute_name(:openid) %></th>
+      <th><%= model_class.human_attribute_name(:url) %></th>
+      <th><%= model_class.human_attribute_name(:time) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @dazhongs.each do |dazhong| %>
+      <tr>
+        <td><%= dazhong.id %></td>
+        <td><%= dazhong.chudian %></td>
+        <td><%= dazhong.openid %></td>
+        <td><%= dazhong.url %></td>
+        <td><%= dazhong.time %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
