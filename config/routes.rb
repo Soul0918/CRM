@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
    resources :tests
    resources :logs
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
    resources :galaxy_macaus
    resources :associators
    root :to => "home#index"
+   mount RailsAdmin::Engine => 'admin', as: 'rails_admin'
 end
 
 get '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
