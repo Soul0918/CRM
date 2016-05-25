@@ -68,6 +68,7 @@ GEM
     haml (4.0.7)
       tilt
     i18n (0.7.0)
+    iconv (1.0.4)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -163,6 +164,15 @@ GEM
     remotipart (1.2.1)
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
+    roo (2.3.2)
+      nokogiri (~> 1)
+      rubyzip (~> 1.1, < 2.0.0)
+    roo-xls (1.0.0)
+      nokogiri
+      roo (>= 2.0.0beta1, < 3)
+      spreadsheet (> 0.9.0)
+    ruby-ole (1.2.12)
+    rubyzip (1.2.0)
     safe_yaml (1.0.4)
     sass (3.4.22)
     sass-rails (5.0.4)
@@ -177,6 +187,8 @@ GEM
     simple_form (3.2.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    spreadsheet (1.1.2)
+      ruby-ole (>= 1.0)
     spring (1.7.1)
     sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
@@ -218,6 +230,7 @@ DEPENDENCIES
   cancancan
   coffee-rails (~> 4.1.0)
   devise
+  iconv
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
@@ -226,6 +239,8 @@ DEPENDENCIES
   rails (= 4.2.5.2)
   rails_admin
   ransack
+  roo
+  roo-xls
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form

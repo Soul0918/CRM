@@ -1,24 +1,32 @@
 Rails.application.routes.draw do
-
-  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+    resources :events
+    resources :members
+    resources :products do
+    collection { post :import }
+  end
+  # scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
    resources :tests
-   resources :logs
+   resources :logs do
+   collection { post :import }
+ end
    resources :products
    resources :posts do
     collection { post :import }
    end
    resources :dazhongs
+
    resources :galaxy_macaus
    resources :huiyuans
    devise_for :users
+   resources :users
    resources :galaxy_macaus
    resources :associators
    root :to => "home#index"
    mount RailsAdmin::Engine => 'admin', as: 'rails_admin'
-end
+# end
 
-get '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
-get '', to: redirect("/#{I18n.default_locale}")
+# get '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }
+# get '', to: redirect("/#{I18n.default_locale}")
   # resources :tests
   # devise_for :users
   # root 'home#index'

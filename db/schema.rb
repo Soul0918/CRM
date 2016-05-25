@@ -11,20 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519030350) do
-
-  create_table "books", force: :cascade do |t|
-    t.string   "title",      limit: 255
-    t.string   "author",     limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "calssfies", force: :cascade do |t|
-    t.string   "kind",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
+ActiveRecord::Schema.define(version: 20160525055806) do
 
   create_table "dazhongs", force: :cascade do |t|
     t.string   "chudian",    limit: 255
@@ -36,8 +23,8 @@ ActiveRecord::Schema.define(version: 20160519030350) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "integral",   limit: 255
+    t.string   "title",      limit: 255
+    t.integer  "integral",   limit: 4
     t.text     "describe",   limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
@@ -52,6 +39,14 @@ ActiveRecord::Schema.define(version: 20160519030350) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "integrals", force: :cascade do |t|
+    t.integer  "event_id",   limit: 4
+    t.integer  "member_id",  limit: 4
+    t.integer  "integral",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
   create_table "logs", force: :cascade do |t|
     t.string "uuid",     limit: 255
     t.string "major",    limit: 255
@@ -62,36 +57,22 @@ ActiveRecord::Schema.define(version: 20160519030350) do
     t.time   "time",     limit: 6
   end
 
-  create_table "mainifests", force: :cascade do |t|
-    t.string   "book_id",    limit: 255
-    t.string   "classfy_id", limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "manifests", force: :cascade do |t|
-    t.string   "book_id",    limit: 255
-    t.string   "classfy_id", limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
   create_table "members", force: :cascade do |t|
-    t.string   "event_id",   limit: 255
     t.string   "name",       limit: 255
+    t.string   "role",       limit: 255
     t.string   "number",     limit: 255
     t.string   "email",      limit: 255
-    t.string   "role",       limit: 255
-    t.string   "integral",   limit: 255
-    t.text     "describe",   limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-  end
-
-  create_table "tests", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.integer  "integral",   limit: 4
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.date     "released_on"
+    t.decimal  "price",                   precision: 10
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   create_table "users", force: :cascade do |t|

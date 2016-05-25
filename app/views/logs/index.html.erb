@@ -10,6 +10,14 @@
   <%= f.search_field :date_cont %>
   <%= f.submit "search" %>
   <% end %>
+
+Download:
+<%= link_to "CSV", logs_path(format: "csv") %> |
+<%= link_to "Excel", logs_path(format: "xls") %>
+<%= form_tag import_logs_path, multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Import" %>
+<% end %>
 </div>
 <table class="table table-striped">
   <thead>
@@ -39,3 +47,4 @@
     <% end %>
   </tbody>
 </table>
+<%= paginate @logs %>

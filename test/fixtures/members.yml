@@ -1,19 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  event_id: MyString
   name: MyString
+  role: MyString
   number: MyString
   email: MyString
-  role: MyString
   integral: MyString
-  describe: MyText
 
 two:
-  event_id: MyString
   name: MyString
+  role: MyString
   number: MyString
   email: MyString
-  role: MyString
   integral: MyString
-  describe: MyText
